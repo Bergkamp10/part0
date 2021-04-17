@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 0.4</title>
+</head>
+
+<body>
+    <h1>0.5 - Events when user visits SPA version</h1>
+
+    <ol>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa</li>
+        <li>Server-->Browser : HTML-code</li>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css</li>
+        <li>Server-->Browser : main.css</li>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js</li>
+        <li>Server-->Browser : spa.js</li>
+
+    </ol>
+
+    <p>
+        note over browser: <br>
+        Browser receives spa.js and executes it. spa.js instructs the browser to make a <br>
+        request for JSON-data from the server.
+    </p>
+
+    <p>
+        note over browser: <br>
+        When the browser receives the JSON-data, it continues executing the javascript code, <br>
+        building the HTML to present the notes using the DOM.
+    </p>
+
+    <ol>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/favicon.fi</li>
+        <li>Server-->Browser : HTML-code</li>
+    </ol>
+</body>
+
+</html>

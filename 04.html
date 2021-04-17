@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 0.4</title>
+</head>
+
+<body>
+    <h1>0.4 - Events when user clicks submit</h1>
+
+    <ol>
+        <li>Browser-->Server : HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note</li>
+        <li>Server-->Browser : HTTP Status code 302</li>
+    </ol>
+
+    <p>
+        note over server: <br>
+        Server receives form data and perform server-side operations (saving to database). <br>
+        Server then returns response with status code 302 (redirect) to browser, instructing the browser to <br>
+        perform a new request to url specified in "location" in the response
+    </p>
+
+    <ol>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes</li>
+        <li>Server-->Browser : HTML-code</li>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css</li>
+        <li>Server-->Browser : main.css</li>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js</li>
+        <li>Server-->Browser : main.js</li>
+    </ol>
+
+    <p>
+        note over browser: <br>
+        browser starts executing js-code
+        that requests JSON data from server <br>
+        end note
+    </p>
+
+    <ol>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json</li>
+        <li>Server-->Browser : [{"content":"","date":"2021-04-16T13:09:47.346Z"},...]</li>
+    </ol>
+
+
+    <p>
+        note over browser: <br>
+        browser executes the event handler
+        that renders notes to display
+        end note
+    </p>
+    <ol>
+        <li>Browser-->Server : HTTP GET https://studies.cs.helsinki.fi/favicon.fi</li>
+        <li>Server-->Browser : HTML-code</li>
+    </ol>
+</body>
+
+</html>
